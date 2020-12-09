@@ -24,10 +24,10 @@ void main()
     diff_light = clamp(diff_light, 0.0, 1.0);
 
     // word position texture swap
-    vec3 swap_distance = distance(var_position.xyz, swap_position.xyz);
-    vec3 sphere = 1.0 - clamp(swap_distance / 1000.0, 0.0, 1.0); // saturate, 100 = magic number radius
+    float swap_distance = distance(var_position.xyz, swap_position.xyz);
+    float sphere = 1.0 - clamp(swap_distance / 1000.0, 0.0, 1.0); // saturate, 100 = magic number radius
     
-    vec3 color_comp = step(sphere.x, 0.1) * color_1.rgb + step(0.1, sphere.x) * color_2.rgb;
+    vec3 color_comp = step(sphere, 0.1) * color_1.rgb + step(0.1, sphere) * color_2.rgb;
     
     gl_FragColor = vec4(color_comp*diff_light,1.0);
 }
