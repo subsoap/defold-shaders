@@ -1,0 +1,29 @@
+local monarch = require "monarch.monarch"
+
+function init(self)
+    msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+end
+
+function update(self, dt)
+end
+
+function on_message(self, message_id, message, sender)
+end
+
+local function press_button(id, action)
+    if gui.pick_node(gui.get_node("btn_" .. id .. "/hitbox"), action.x, action.y) and action.released then
+        monarch.show(hash(id))
+    end
+end
+
+function on_input(self, action_id, action)
+    if monarch.is_busy() then return false end
+
+    press_button("world_position_texture_swap", action)
+end
+
+function on_reload(self)
+end

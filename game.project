@@ -1,0 +1,18 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+render = /rendercam/rendercam.renderc
+
+[script]
+shared_state = 1
+
+[display]
+width = 960
+height = 640
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = 2021_shader_experiments
+dependencies = https://github.com/britzl/monarch/archive/master.zip,https://github.com/rgrams/rendercam/archive/1.0.3.zip,https://github.com/britzl/ludobits/archive/6.9.1.zip
+
