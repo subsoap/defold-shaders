@@ -14,5 +14,5 @@ input_method = HiddenInputField
 
 [project]
 title = 2021_shader_experiments
-dependencies = https://github.com/britzl/monarch/archive/master.zip,https://github.com/rgrams/rendercam/archive/1.0.3.zip,https://github.com/britzl/ludobits/archive/6.9.1.zip
+dependencies = https://github.com/britzl/monarch/archive/master.zip,https://github.com/britzl/ludobits/archive/6.9.1.zip
 

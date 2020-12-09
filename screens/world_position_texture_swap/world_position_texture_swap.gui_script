@@ -1,13 +1,31 @@
-local monarch = require "monarch.monarch"
+local monarch = require("monarch.monarch")
+local global_constants = require("rendercam.global_constants")
 
 function init(self)
     msg.post(".", "acquire_input_focus")
+    self.time = 0
 end
 
 function final(self)
+    global_constants.reset()
 end
 
 function update(self, dt)
+    self.time = self.time + dt
+
+    local position = vmath.vector4(960/2,640/2,0,0)
+    local offset = vmath.vector4(200,200,0,0)
+    
+    offset.x = offset.x * math.sin(self.time)
+    offset.y = offset.y * math.cos(self.time)
+
+    position = position + offset
+    
+    global_constants.set("light", position)
+    global_constants.set("swap_position", position)
+
+    local time = vmath.vector4(self.time, 0,0,0)
+    global_constants.set("time", time)
 end
 
 function on_message(self, message_id, message, sender)
@@ -16,7 +34,7 @@ end
 function on_input(self, action_id, action)
     if monarch.is_busy() then return false end
     
-    if action.released then
+    if action_id == hash("key_esc") and action.released then
         monarch.back()
     end
 end

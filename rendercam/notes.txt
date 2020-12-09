@@ -1,0 +1,3 @@
+This version is slightly modified to add global constants. Of course you will want to have constants for each each render predicate potentially and not just models.
+
+The reason for using global constants is to reduce drawcalls. Instead of for example setting the position of lights on every object in the scene, it can be done all at once in the render script.

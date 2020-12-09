@@ -1,0 +1,7 @@
+ref
+https://www.patreon.com/posts/quick-game-art-19355776
+
+this effect could be used for showing a hidden world / revealing objects near a player (like some cloud of war effects do)
+
+GLSL does not have the same functions as HLSL
+differences in step and the lack of saturate are examples
