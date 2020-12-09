@@ -13,6 +13,12 @@ height = 640
 input_method = HiddenInputField
 
 [project]
-title = 2021_shader_experiments
+title = 2021 Shader Experiments
 dependencies = https://github.com/britzl/monarch/archive/master.zip,https://github.com/britzl/ludobits/archive/6.9.1.zip
+
+[html5]
+scale_mode = stretch
+show_fullscreen_button = 0
+show_made_with_defold = 0
+cssfile = /builtins/manifests/web/dark_theme.css
 

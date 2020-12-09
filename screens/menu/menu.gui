@@ -262,7 +262,8 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Press ESC to return"
+  text: "Press ESC to return\n"
+  "Press F1 or 1 to toggle profiler (debug only)"
   font: "vera_mo_bd-df"
   id: "text1"
   xanchor: XANCHOR_NONE
