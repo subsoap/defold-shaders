@@ -1,7 +1,7 @@
 name: "model"
 tags: "model"
-vertex_program: "/builtins/materials/model.vp"
-fragment_program: "/main/materials/world_position_texture_swap/world_position_texture_swap.fp"
+vertex_program: "/materials/world_position_texture_swap/world_position_texture_swap.vp"
+fragment_program: "/materials/world_position_texture_swap/world_position_texture_swap.fp"
 vertex_space: VERTEX_SPACE_LOCAL
 vertex_constants {
   name: "mtx_worldview"
