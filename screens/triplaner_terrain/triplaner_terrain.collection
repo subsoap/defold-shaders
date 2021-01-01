@@ -1,0 +1,159 @@
+name: "triplaner_terrain"
+instances {
+  id: "camera"
+  prototype: "/rendercam/camera.go"
+  position {
+    x: 480.0
+    y: 320.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "orthographic"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "farZ"
+      value: "1000.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "viewDistance"
+      value: "400.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "fov"
+      value: "90.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"monarch\"\n"
+  "  component: \"/screens/triplaner_terrain/triplaner_terrain.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "rotate"
+  children: "rock"
+  data: "components {\n"
+  "  id: \"rotate_me\"\n"
+  "  component: \"/screens/triplaner_terrain/code/rotate_me.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 472.0
+    y: 366.0
+    z: -408.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "rock"
+  data: "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/assets/models/rock/rock.dae\\\"\\n"
+  "material: \\\"/materials/triplaner_terrain/triplaner_terrain.material\\\"\\n"
+  "textures: \\\"/assets/kenny/tiles/stone.png\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: -50.0
+  }
+  rotation {
+    x: 0.20293516
+    y: 0.6045292
+    z: 0.029354578
+    w: 0.7697403
+  }
+  scale3 {
+    x: 100.0
+    y: 100.0
+    z: 100.0
+  }
+}

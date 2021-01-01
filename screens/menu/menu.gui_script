@@ -1,5 +1,7 @@
 local monarch = require "monarch.monarch"
 
+-- todo, automate button gen from a list
+
 function init(self)
     msg.post(".", "acquire_input_focus")
 end
@@ -23,6 +25,7 @@ function on_input(self, action_id, action)
     if monarch.is_busy() then return false end
 
     press_button("world_position_texture_swap", action)
+    press_button("triplaner_terrain", action)
 
     if gui.pick_node(gui.get_node("btn_github/hitbox"), action.x, action.y) and action.released then
         sys.open_url("https://github.com/subsoap/2021_shader_experiments", {target = "_blank"})
